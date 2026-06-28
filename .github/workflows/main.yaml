@@ -13,6 +13,8 @@ jobs:
     steps:
       # Check-out your repository.
       - name: Checkout
+        uses: actions/checkout@v2
+
 
 ### ⬇ IMPORTANT PART ⬇ ###
 
@@ -52,3 +54,6 @@ jobs:
           # For more information look at https://devcenter.heroku.com/articles/process-model
           process_type: web
           
+   
+          
+### ⬆ IMPORTANT PART ⬆ ###
