@@ -9,7 +9,7 @@ on:
 # Your workflows jobs.
 jobs:
   build:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     steps:
       # Check-out your repository.
       - name: Checkout
