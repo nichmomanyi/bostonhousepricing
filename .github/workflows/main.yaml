@@ -15,6 +15,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
+      # Install the Heroku CLI — ubuntu-latest no longer ships it by default,
+      # and gonuit/heroku-docker-deploy needs it on PATH for the release step.
+      - name: Install Heroku CLI
+        run: curl https://cli-assets.heroku.com/install.sh | sh
 
 ### ⬇ IMPORTANT PART ⬇ ###
 
@@ -53,7 +57,5 @@ jobs:
           # By default, this argument is set to "web".
           # For more information look at https://devcenter.heroku.com/articles/process-model
           process_type: web
-          
-   
-          
+
 ### ⬆ IMPORTANT PART ⬆ ###
